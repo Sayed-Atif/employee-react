@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import EmployeeListItem from "./EmployeeListItem";
 
-function EmployeeList() {
+function EmployeeList({ staff }) {
   return (
-    <div>EmployeeList</div>
-  )
+    <>
+      {staff.map((worker)=>{
+        return <EmployeeListItem info={worker} /> 
+      })}
+    </>
+  );
 }
 
-export default EmployeeList
+export default EmployeeList;

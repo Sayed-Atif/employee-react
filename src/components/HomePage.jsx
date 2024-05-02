@@ -1,9 +1,15 @@
 import React from 'react'
-
-function HomePage() {
+import Header from './Header'
+import Searchbar from './SearchBar'
+import EmployeeList from './EmployeeList'
+function Homepage({title,workers}) {
   return (
-    <div>HomePage</div>
+    <div className="homepage">
+      Homepage
+    <Header topic={title}/>  
+    <Searchbar />
+    <EmployeeList staff={workers}/>
+    </div>
   )
 }
-
-export default HomePage
+export default Homepage
